@@ -50,6 +50,7 @@
 <style  scoped>
     .tabs p {
         position: relative;
+        z-index: 0;
     }
 
     .tabs p::after {

@@ -1,11 +1,11 @@
 <template>
- <nav :class="navFix? 'fixed top-0 animate__fadeInDown':''" class=" duration-200 animate__animated  w-full bg-white dark:bg-zinc-800 dark:text-white flex justify-between items-center px-4 md:px-10 py-3 shadow-md">
+ <nav :class="navFix && !(menuStatus) ? 'fixed top-0 animate__fadeInDown':''" class=" z-20 duration-200 animate__animated  w-full bg-white dark:bg-zinc-800 dark:text-white flex justify-between items-center px-4 md:px-10 py-3 shadow-md">
     <a href="#">Waiyan's <span class="bg-primary text-white p-2 rounded-sm ms-2">Portfolio</span></a>
-    <div :class="menuStatus ? 'left-0':'-left-full'" id="menu" class="duration-200 fixed z-20 md:static md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent w-screen h-screen top-0 flex justify-center items-center bg-slate-200 dark:bg-zinc-950">
+    <div :class="menuStatus ? 'left-0':'-left-full'" id="menu" class="duration-200 fixed z-40 md:static md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent w-screen h-screen top-0 flex justify-center items-center bg-slate-200 dark:bg-zinc-950">
         <ul class="flex flex-col md:flex-row space-y-6 md:space-y-0 text-center text-xl md:text-base  md:space-x-6 text-zinc-600 dark:text-slate-300">
             <li><a href="#home" @click="setActive('home')" :class="{ 'nav-active': activeItem === 'home' }" >Home</a></li>
             <li><a href="#about"  @click="setActive('about')" :class="{ 'nav-active': activeItem === 'about' }" >About</a></li>
-            <li><a href="#"  @click="setActive('services')" :class="{ 'nav-active': activeItem === 'services' }" >Services</a></li>
+            <li><a href="#services"  @click="setActive('services')" :class="{ 'nav-active': activeItem === 'services' }" >Services</a></li>
             <li><a href="#"  @click="setActive('portfolio')" :class="{ 'nav-active': activeItem === 'portfolio' }" >Portfolio</a></li>
             <li><a href="#"  @click="setActive('contact')" :class="{ 'nav-active': activeItem === 'contact' }" >Contact</a></li>
         </ul>

@@ -3,6 +3,7 @@ import TopNav from './components/TopNav.vue'
 import Home from './components/Home.vue'
 import RightLine from './components/RightLine.vue'
 import About from './components/About.vue'
+import Services from './components/Services.vue'
 
 </script>
 
@@ -23,8 +24,11 @@ import About from './components/About.vue'
       <!-- about section  -->
       <div ref="aboutSection">
       <about ></about>
-
       </div>
+
+      <!-- services section  -->
+      <services></services>
+
 
     </div>
     <!-- main body end  -->
@@ -45,6 +49,7 @@ import About from './components/About.vue'
 
 
 export default {
+  components: { Services },
   data() {
     return {
       navFix: false,
