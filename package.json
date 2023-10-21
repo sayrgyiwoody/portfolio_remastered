@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-waypoint": "^4.3.0",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

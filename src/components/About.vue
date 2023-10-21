@@ -75,6 +75,7 @@
 </style>
 
 <script>
+
 export default {
     data() {
         return {
@@ -84,7 +85,12 @@ export default {
     methods: {
         setTab(tabName) {
             this.currentTab = tabName;
-        }
+        },
+        
     },
+    
+    
 }
+
+
 </script>
