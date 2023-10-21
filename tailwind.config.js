@@ -10,6 +10,7 @@ export default {
       colors: {
         primary: '#2563EB',
         primary_hover : '#1d4ed8',
+        muted : '#ababab',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

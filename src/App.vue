@@ -11,7 +11,7 @@ import About from './components/About.vue'
     <top-nav></top-nav>
 
     <!-- main body start -->
-    <div class="h-screen bg-slate-100 dark:bg-zinc-900 px-10 py-12 md:py-0 md:px-32">
+    <div class="  bg-slate-100 dark:bg-zinc-900 px-10 py-12 md:py-0 md:pb-44 md:px-32">
       
       <!--Right social -->
       <right-line></right-line>
