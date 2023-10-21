@@ -28,19 +28,19 @@
                 </div>
                 <div v-if="currentTab === 'exp'" class="exp">
                     <p class=" mt-3 font-medium text-primary">2023 - current</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">Freelancer Web Developer</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Freelancer Web Developer</p>
                     <p class=" mt-3 font-medium text-primary">2021 - 2023</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">Junior Web Developer</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Junior Web Developer</p>
                     <p class=" mt-3 font-medium text-primary">2020 - 2021</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">UI/UX Designer</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">UI/UX Designer</p>
                 </div>
                 <div v-if="currentTab === 'edu'" class="edu">
                     <p class=" mt-3 font-medium text-primary">2022 - current</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">University of Computer Studies Yangon</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">University of Computer Studies Yangon</p>
                     <p class=" mt-3 font-medium text-primary">2019 - 2020</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">Passed matriculation exam</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Passed matriculation exam</p>
                     <p class=" mt-3 font-medium text-primary">2016 - 2019</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-muted">Pinlon Rose Private High School</p>
+                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Pinlon Rose Private High School</p>
                 </div>
             </div>
         </div>
