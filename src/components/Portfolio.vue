@@ -16,7 +16,7 @@
                     <div class="img-container relative mb-2">
                         <img :src="p.image_url" class="rounded-sm" alt="project_image">
                     </div>
-                    <h3 class="text-primary dark:text-white mb-1 text-md md:text-2xl ">{{p.title}}</h3>
+                    <h3 class="text-primary font-medium dark:text-white mb-1 text-md md:text-2xl ">{{p.title}}</h3>
                     <p class="text-gray-500 dark:text-muted text-[10px] md:text-xs mb-1">{{p.desc}}</p>
                     <div class="text-zinc-900 dark:text-slate-300 font-medium text-[10px] md:text-base mt-2">
                         <a href="" class=" hover:text-primary duration-150 me-2"><i class="fa-brands fa-github me-2"></i>Source</a> 

@@ -6,6 +6,7 @@ import About from './components/About.vue'
 import Services from './components/Services.vue'
 import Portfolio from './components/Portfolio.vue'
 import Contact from './components/Contact.vue'
+
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import Contact from './components/Contact.vue'
     <top-nav :navFix="navFix"></top-nav>
 
     <!-- main body start -->
-    <div class="  bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-44 md:px-32">
+    <div class="  bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-32 md:px-32">
       
       <!--Right social -->
       <right-line></right-line>
@@ -38,6 +39,13 @@ import Contact from './components/Contact.vue'
 
     </div>
     <!-- main body end  -->
+
+    <!-- copyright start  -->
+    <div class="bg-primary text-slate-100 dark:bg-zinc-800 py-5 flex justify-center items-center">
+      <i class="fa-solid fa-copyright  text-2xl me-2"></i>
+      <p>2023 , All rights reserved by <a target="_blank" href="https://github.com/sayrgyiwoody" class="underline font-semibold">Wai Yan Tun</a></p>
+    </div>
+    <!-- copyright end  -->
 </template>
 
 <style>

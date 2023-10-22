@@ -7,7 +7,7 @@
             <li><a href="#about"  @click="setActive('about')" :class="{ 'nav-active': activeItem === 'about' }" >About</a></li>
             <li><a href="#services"  @click="setActive('services')" :class="{ 'nav-active': activeItem === 'services' }" >Services</a></li>
             <li><a href="#portfolio"  @click="setActive('portfolio')" :class="{ 'nav-active': activeItem === 'portfolio' }" >Portfolio</a></li>
-            <li><a href="#"  @click="setActive('contact')" :class="{ 'nav-active': activeItem === 'contact' }" >Contact</a></li>
+            <li><a href="#contact"  @click="setActive('contact')" :class="{ 'nav-active': activeItem === 'contact' }" >Contact</a></li>
         </ul>
         <div @click="toggleMenu" class="md:hidden btn-close-menu rounded-full border border-2 p-1 border-primary absolute top-7 right-7">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 256 256"><path fill="currentColor" d="M208.49 191.51a12 12 0 0 1-17 17L128 145l-63.51 63.49a12 12 0 0 1-17-17L111 128L47.51 64.49a12 12 0 0 1 17-17L128 111l63.51-63.52a12 12 0 0 1 17 17L145 128Z"/></svg>
