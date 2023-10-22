@@ -6,7 +6,7 @@
             <li><a href="#home" @click="setActive('home')" :class="{ 'nav-active': activeItem === 'home' }" >Home</a></li>
             <li><a href="#about"  @click="setActive('about')" :class="{ 'nav-active': activeItem === 'about' }" >About</a></li>
             <li><a href="#services"  @click="setActive('services')" :class="{ 'nav-active': activeItem === 'services' }" >Services</a></li>
-            <li><a href="#"  @click="setActive('portfolio')" :class="{ 'nav-active': activeItem === 'portfolio' }" >Portfolio</a></li>
+            <li><a href="#portfolio"  @click="setActive('portfolio')" :class="{ 'nav-active': activeItem === 'portfolio' }" >Portfolio</a></li>
             <li><a href="#"  @click="setActive('contact')" :class="{ 'nav-active': activeItem === 'contact' }" >Contact</a></li>
         </ul>
         <div @click="toggleMenu" class="md:hidden btn-close-menu rounded-full border border-2 p-1 border-primary absolute top-7 right-7">

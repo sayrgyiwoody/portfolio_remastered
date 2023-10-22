@@ -4,7 +4,8 @@ import Home from './components/Home.vue'
 import RightLine from './components/RightLine.vue'
 import About from './components/About.vue'
 import Services from './components/Services.vue'
-
+import Portfolio from './components/Portfolio.vue'
+import Contact from './components/Contact.vue'
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import Services from './components/Services.vue'
     <top-nav :navFix="navFix"></top-nav>
 
     <!-- main body start -->
-    <div class="  bg-slate-100 dark:bg-zinc-900 px-10 py-12 md:py-0 md:pb-44 md:px-32">
+    <div class="  bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-44 md:px-32">
       
       <!--Right social -->
       <right-line></right-line>
@@ -29,6 +30,11 @@ import Services from './components/Services.vue'
       <!-- services section  -->
       <services></services>
 
+      <!-- portfolio section  -->
+      <portfolio></portfolio>
+
+      <!-- contact section  -->
+      <contact></contact>
 
     </div>
     <!-- main body end  -->

@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class=" py-10 md:py-20 items-center justify-center md:px-52 grid md:grid-cols-2">
+    <div id="about" class="px-5 py-10 md:py-20 items-center justify-center md:px-52 grid md:grid-cols-2">
         <div class="img-container">
             <img src="../assets/images/woody.jpg" class=" w-80  rounded-md" alt="">
         </div>

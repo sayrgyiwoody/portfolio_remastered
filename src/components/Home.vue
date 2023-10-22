@@ -1,5 +1,5 @@
 <template>
-    <div id="home" class="grid md:grid-cols-2 h-[90vh] md:px-32 justify-center items-center">
+    <div id="home" class="grid md:grid-cols-2 h-[90vh] px-5 md:px-32 justify-center items-center">
         <div class=" mb-10 md:mb-20">
             <div class="relative flex flex-col items-center">
                 <img src="../assets/images/me.png" class=" w-96 relative bottom-[2px] left-0 z-10" alt="">
