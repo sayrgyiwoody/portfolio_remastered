@@ -12,7 +12,7 @@
                 <p :class="{'active':selectedType === 'full-stack'}" @click="selectType('full-stack')">Full-stack</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4">
-                <div v-for="(p,index) in filterProjects" :key="index" class="rounded-md shadow-sm hover:shadow-md me-2 md:me-5 mb-2 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
+                <div v-for="(p,index) in filterProjects" :key="index" class=" rounded-md shadow-sm hover:shadow-md me-2 md:me-5 mb-2 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
                     <div class="img-container relative mb-2">
                         <img :src="p.image_url" class="rounded-sm" alt="project_image">
                     </div>
