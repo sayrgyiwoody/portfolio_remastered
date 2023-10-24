@@ -1,17 +1,17 @@
 <template>
     <div id="about" class="px-5 py-10 md:py-20 items-center justify-center md:px-52 grid md:grid-cols-2">
-        <div class="img-container">
-            <img src="../assets/images/woody.jpg" class=" w-80  rounded-md" alt="">
+        <div v-scroll-reveal.reset="{origin : 'left' , distance : '30px'}" class="img-container">
+            <img  v-bind:src="`./images/woody.jpg`" class=" md:w-80 w-full h-80 md:h-full object-cover  rounded-md" alt="">
         </div>
         <div class="about-text mt-6 md:mt-0">
-            <h4 class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3">About <span class="text-primary">Me</span></h4>
-            <p class="text-gray-500 dark:text-muted text-sm font-medium mb-4">Hello I'm Waiyan Tun. I'm a 19 years old passionate programmer who still learning about modern programming.</p>
-            <div class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold">
+            <h4 v-scroll-reveal.reset="{origin : 'top' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3">About <span class="text-primary">Me</span></h4>
+            <p v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px'}" class="text-gray-500 dark:text-muted text-sm font-medium mb-4">Hello I'm Waiyan Tun. I'm a 19 years old passionate programmer who still learning about modern programming.</p>
+            <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px' , delay : 700}" class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold">
                 <p @click="setTab('skill')" :class="{'active':currentTab === 'skill'}">Skill</p>
                 <p @click="setTab('exp')" :class="{'active':currentTab === 'exp'}">Experience</p>
                 <p @click="setTab('edu')" :class="{'active':currentTab === 'edu'}">Education</p>
             </div>
-            <div class="tab-info py-5">
+            <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px' , delay : 700}" class="tab-info py-5">
                 <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">
                     <p class=" mt-3">Web Design</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -74,6 +74,18 @@
     }
 
 </style>
+
+<script setup>
+import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
+const vScrollReveal = createScrollRevealDirective({
+    class : 'v-scroll-reveal',
+    delay: 500,
+    duration: 1500,
+    distance : '80px',
+    reset : false ,
+    opacity : 0,
+});
+</script>
 
 <script>
 

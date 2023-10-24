@@ -42,8 +42,8 @@ import Contact from './components/Contact.vue'
 
     <!-- copyright start  -->
     <div class="bg-primary text-slate-100 dark:bg-zinc-800 py-5 flex justify-center items-center">
-      <i class="fa-solid fa-copyright  text-2xl me-2"></i>
-      <p>2023 , All rights reserved by <a target="_blank" href="https://github.com/sayrgyiwoody" class="underline font-semibold">Wai Yan Tun</a></p>
+      <i class="fa-solid fa-copyright text-lg md:text-2xl me-2"></i>
+      <p class="text-xs md:text-lg">2023 , All rights reserved by <a target="_blank" href="https://github.com/sayrgyiwoody" class="underline font-semibold">Wai Yan Tun</a></p>
     </div>
     <!-- copyright end  -->
 </template>
