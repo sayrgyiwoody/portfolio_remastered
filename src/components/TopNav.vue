@@ -105,6 +105,7 @@ export default {
   methods: {
     setActive(item) {
         this.activeItem = item;
+        this.toggleMenu();
     },
     toggleMenu(){
         this.menuStatus = !this.menuStatus;

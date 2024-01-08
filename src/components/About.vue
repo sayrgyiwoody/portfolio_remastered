@@ -13,6 +13,10 @@
             </div>
             <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px' , delay : 700}" class="tab-info py-5">
                 <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">
+                    <p class=" mt-3">Graphic Design</p>
+                    <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
+                    </div>
                     <p class=" mt-3">Web Design</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
@@ -26,15 +30,15 @@
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
                     </div>
                 </div>
-                <div v-if="currentTab === 'exp'" class="exp">
-                    <p class=" mt-3 font-medium text-primary">2023 - current</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Freelancer Web Developer</p>
-                    <p class=" mt-3 font-medium text-primary">2021 - 2023</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">Junior Web Developer</p>
-                    <p class=" mt-3 font-medium text-primary">2020 - 2021</p>
-                    <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">UI/UX Designer</p>
+                <div v-if="currentTab === 'exp'" class="exp animate__animated animate__bounceIn">
+                    <p class="text-xl mt-3 font-medium text-primary">2023 - current</p>
+                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Graphic Designer at Creative Coder MM</p>
+                    <p class="text-xl mt-3 font-medium text-primary">Hackathons</p>
+                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">2023 Job-Matching Hackathon 2nd Runner Up</p>
+                    <p class="text-xl mt-3 font-medium text-primary">OJTs</p>
+                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Code Lab A to Z batch 6 OJT First Prize Winner</p>
                 </div>
-                <div v-if="currentTab === 'edu'" class="edu">
+                <div v-if="currentTab === 'edu'" class="edu animate__animated animate__bounceIn">
                     <p class=" mt-3 font-medium text-primary">2022 - current</p>
                     <p class=" text-lg font-medium text-gray-700 dark:text-slate-300">University of Computer Studies Yangon</p>
                     <p class=" mt-3 font-medium text-primary">2019 - 2020</p>
