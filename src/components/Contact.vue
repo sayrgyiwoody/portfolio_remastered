@@ -121,14 +121,16 @@ export default {
 
             emailjs.send('service_s76aagk', 'template_yt8s2oe', templateParams, 'p4u1TitNSl2DxBxUQ')
                 .then(response => {
+                    this.sendingStatus = false;
                     this.showAlert('contact message sent successfully.','success');
                     this.clearForm();
                 })
                 .catch(error => {
+                    this.sendingStatus = false;
                     this.showAlert('Message not sent.','error');
                     console.log(error);
                 });
-                this.sendingStatus = false;
+                
         },
         clearForm(){
             this.name = '';
