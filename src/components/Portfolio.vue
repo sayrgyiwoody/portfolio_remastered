@@ -5,11 +5,11 @@
             <h2 v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-xl md:text-4xl font-medium">Some of My <span class="text-primary">Recent Works</span></h2>
         </div>   
             
-            <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px' , delay : 700}" class="flex space-x-4 md:space-x-6 my-6 text-sm md:text-xl text-zinc-900 dark:text-slate-100">
-                <p :class="{'active':selectedType === 'all'}" @click="selectType('all')">All</p>
-                <p :class="{'active':selectedType === 'graphic'}" @click="selectType('graphic')">Graphic</p>
-                <p :class="{'active':selectedType === 'front-end'}" @click="selectType('front-end')">Front-end</p>
-                <p :class="{'active':selectedType === 'full-stack'}" @click="selectType('full-stack')">Full-stack</p>
+            <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px' , delay : 700}" class="flex  space-x-4 md:space-x-6 my-6 text-sm md:text-xl text-zinc-900 dark:text-slate-100">
+                <p class=" cursor-pointer" :class="{'active':selectedType === 'all'}" @click="selectType('all')">All</p>
+                <p class=" cursor-pointer" :class="{'active':selectedType === 'graphic'}" @click="selectType('graphic')">Graphic</p>
+                <p class=" cursor-pointer" :class="{'active':selectedType === 'front-end'}" @click="selectType('front-end')">Front-end</p>
+                <p class=" cursor-pointer" :class="{'active':selectedType === 'full-stack'}" @click="selectType('full-stack')">Full-stack</p>
             </div>
             <div  v-scroll-reveal.reset="{
                 origin: 'bottom',

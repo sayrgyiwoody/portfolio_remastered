@@ -7,9 +7,9 @@
             <h4 v-scroll-reveal.reset="{origin : 'top' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3">About <span class="text-primary">Me</span></h4>
             <p v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px'}" class="text-gray-500 dark:text-muted text-sm font-medium mb-4">Hello I'm Waiyan Tun. I'm a 19 years old passionate programmer who still learning about modern programming.</p>
             <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px' , delay : 700}" class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold">
-                <p @click="setTab('skill')" :class="{'active':currentTab === 'skill'}">Skill</p>
-                <p @click="setTab('exp')" :class="{'active':currentTab === 'exp'}">Experience</p>
-                <p @click="setTab('edu')" :class="{'active':currentTab === 'edu'}">Education</p>
+                <p class=" cursor-pointer" @click="setTab('skill')" :class="{'active':currentTab === 'skill'}">Skill</p>
+                <p class=" cursor-pointer" @click="setTab('exp')" :class="{'active':currentTab === 'exp'}">Experience</p>
+                <p class=" cursor-pointer" @click="setTab('edu')" :class="{'active':currentTab === 'edu'}">Education</p>
             </div>
             <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px' , delay : 700}" class="tab-info py-5">
                 <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">

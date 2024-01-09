@@ -22,7 +22,7 @@
                   <i :class="service.icon" class=" text-zinc-900 dark:text-white fa-solid  text-5xl mb-2"></i>
                   <h4 class=" mb-2 text-zinc-900 dark:text-slate-100 text-3xl font-medium">{{service.title}}</h4>
                   <p class="font-medium mb-2 text-gray-500 dark:text-muted">{{service.desc}}</p>
-                  <p class="text-medium hover:text-primary dark:hover:text-primary_hover duration-150 text-zinc-900 dark:text-slate-100">Learn more</p>
+                  <p class="text-medium cursor-pointer hover:text-primary dark:hover:text-primary_hover duration-150 text-zinc-900 dark:text-slate-100">Learn more</p>
                 </div>
                 
             </div>
