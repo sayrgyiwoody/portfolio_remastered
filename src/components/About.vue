@@ -15,19 +15,19 @@
                 <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">
                     <p class=" mt-3">Graphic Design</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 25%"></div>
                     </div>
                     <p class=" mt-3">Web Design</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
                     </div>
                     <p class=" mt-3">Frond-end Developing</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
                     </div>
                     <p class=" mt-3">Back-end Developing</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 35%"></div>
                     </div>
                 </div>
                 <div v-if="currentTab === 'exp'" class="exp animate__animated animate__bounceIn">

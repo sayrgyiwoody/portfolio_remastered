@@ -14,6 +14,7 @@
     "vue": "^3.3.4",
     "vue-scroll-reveal": "^2.1.0",
     "vue-waypoint": "^4.3.0",
+    "vuex": "^4.0.2",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {

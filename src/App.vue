@@ -14,6 +14,7 @@ import Contact from './components/Contact.vue'
     <!-- top nav bar -->
     <top-nav :navFix="navFix"></top-nav>
 
+    
     <!-- main body start -->
     <div class="  bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-32 md:px-32">
       

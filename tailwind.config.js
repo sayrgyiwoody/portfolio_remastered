@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode : 'class',
+module.exports = {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
@@ -8,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2563EB',
-        primary_hover : '#1d4ed8',
-        muted : '#ababab',
+        primary: 'var(--color-primary)',
+        primary_hover: 'var(--color-primary-hover)',
+        muted: '#ababab',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -18,4 +17,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
