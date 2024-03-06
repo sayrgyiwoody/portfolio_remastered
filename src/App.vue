@@ -52,6 +52,7 @@ import Contact from './components/Contact.vue'
 <style>
 :root {
   --color-primary: #2563EB;
+  --color-primary-hover: #1d4ed8;
 }
 
 * {
