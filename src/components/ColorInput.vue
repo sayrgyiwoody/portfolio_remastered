@@ -27,9 +27,18 @@
             // Convert darkened RGB back to HEX
             return `#${(darkenedR * 65536 + darkenedG * 256 + darkenedB).toString(16).padStart(6, '0')}`;
         },
-    },
-    watch: {
-      selectedColor(newColor) {
+        setRandPrimaryColor() {
+          const colors = ['#2563EB','#8112fa','#23905f','#ca271c','#e724eb','#0d8f91'];
+          // Generate a random index
+          const randomIndex = Math.floor(Math.random() * colors.length);
+
+          // Get the random color
+          const randomColor = colors[randomIndex];
+          this.selectedColor = randomColor;
+          this.changePrimaryColor(randomColor);
+        },
+        changePrimaryColor(newColor){
+          
         // set primary color 
         document.documentElement.style.setProperty('--color-primary', newColor);
 
@@ -37,8 +46,16 @@
         const primaryColor = newColor;
         const primaryHoverColor = this.darkenColor(primaryColor, 20); // Adjust the value for the desired darkness
         document.documentElement.style.setProperty('--color-primary-hover', primaryHoverColor);
-        
+
+        }
+    },
+    watch: {
+      selectedColor(newColor) {
+        this.changePrimaryColor(newColor);
       }
+    },
+    mounted () {
+      this.setRandPrimaryColor();
     },
     
   };
