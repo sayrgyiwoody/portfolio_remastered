@@ -28,7 +28,7 @@
             return `#${(darkenedR * 65536 + darkenedG * 256 + darkenedB).toString(16).padStart(6, '0')}`;
         },
         setRandPrimaryColor() {
-          const colors = ['#2563EB','#8112fa','#23905f','#ca271c','#e724eb','#0d8f91'];
+          const colors = ['#2563EB','#8112fa','#23905f','#2563EB','#e724eb','#0d8f91'];
           // Generate a random index
           const randomIndex = Math.floor(Math.random() * colors.length);
 

@@ -12,7 +12,7 @@
                 <p class=" cursor-pointer" @click="setTab('edu')" :class="{'active':currentTab === 'edu'}">Education</p>
             </div>
             <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '40px' , delay : 700}" class="tab-info py-5">
-                <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">
+                <div v-if="currentTab === 'skill'" class="skil animate__animated animate__bounceIn text-zinc-900 dark:text-slate-300 font-semibold">
                     <p class=" mt-3">Graphic Design</p>
                     <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-primary h-2.5 rounded-full" style="width: 25%"></div>

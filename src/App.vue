@@ -10,7 +10,6 @@ import Contact from './components/Contact.vue'
 </script>
 
 <template>
-  
     <!-- top nav bar -->
     <top-nav :navFix="navFix"></top-nav>
 
@@ -95,13 +94,15 @@ export default {
         },
         offset: '35%' 
       })
-    }
+    },
+    
 
     
   },
   mounted () {
     this.checkDarkMode();
     this.checkWayPoint();
+    
   },
 }
 

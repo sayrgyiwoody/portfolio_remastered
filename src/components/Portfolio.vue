@@ -16,7 +16,7 @@
                 distance: '40px',
                 delay: 400,
               }" class="grid md:grid-cols-3">
-                <div v-for="(p,index) in filterProjects" :key="index" :class="{ 'animate__bounceIn': animate }" class=" animate__animated rounded-md shadow-sm hover:shadow-md  md:me-5 mb-4 md:mb-3 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
+                <div v-for="(p,index) in filterProjects" :key="index" :class="{ 'animate__bounceIn': animate }" class=" animate__animated  rounded-md shadow-sm hover:shadow-md  md:me-5 mb-4 md:mb-3 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
                     
                     <div class="img-container relative mb-2 ">
                         <img :src="p.image_url" class="rounded-sm w-full object-cover h-44" alt="project_image">
@@ -143,6 +143,7 @@ export default {
             this.selectedType = type;
             this.animate = true;
         },
+        
         
     }
 }
