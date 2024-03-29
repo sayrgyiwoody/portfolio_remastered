@@ -15,9 +15,9 @@
                 class="md:me-5 mb-4 md:mb-0 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 p-6 rounded-md shadow-sm hover:shadow-md bg-white dark:bg-zinc-800">
                 <div v-scroll-reveal.reset="{
                     origin: 'bottom',
-                    distance: '40px',
-                    delay: 800 + index * 200 ,
-                    mobile : false,
+                    distance: '20px',
+                    delay: 600 ,
+                    mobile : true,
                   }">
                   <i :class="service.icon" class=" text-zinc-900 dark:text-white fa-solid  text-5xl mb-2"></i>
                   <h4 class=" mb-2 text-zinc-900 dark:text-slate-100 text-3xl font-medium">{{service.title}}</h4>

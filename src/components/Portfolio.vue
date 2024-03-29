@@ -11,12 +11,14 @@
                 <p class=" cursor-pointer" :class="{'active':selectedType === 'front-end'}" @click="selectType('front-end')">Front-end</p>
                 <p class=" cursor-pointer" :class="{'active':selectedType === 'full-stack'}" @click="selectType('full-stack')">Full-stack</p>
             </div>
-            <div  v-scroll-reveal.reset="{
-                origin: 'bottom',
-                distance: '40px',
-                delay: 400,
-              }" class="grid md:grid-cols-3">
-                <div v-for="(p,index) in filterProjects" :key="index" :class="{ 'animate__bounceIn': animate }" class=" animate__animated  rounded-md shadow-sm hover:shadow-md  md:me-5 mb-4 md:mb-3 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
+            <div  class="grid md:grid-cols-3">
+                <div v-scroll-reveal.reset="{
+                    origin: 'bottom',
+                    distance: '20px',
+                    delay: 600 ,
+                    mobile : true,
+                  }"
+                 v-for="(p,index) in filterProjects" :key="index" :class="{ 'animate__bounceIn': animate }" class=" animate__animated  rounded-md shadow-sm hover:shadow-md  md:me-5 mb-4 md:mb-3 md:mb-5 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 bg-white dark:bg-zinc-800 p-4">
                     
                     <div class="img-container relative mb-2 ">
                         <img :src="p.image_url" class="rounded-sm w-full object-cover h-44" alt="project_image">
@@ -81,12 +83,12 @@ export default {
 
                 {
                     'id' : 2,
-                    'title':'Space Blog',
-                    'desc' : 'Front-end blog application with fake json server using HTML , CSS , Bootstrap , Javascript .',
-                    'image_url' : './projects_demo/space_blog.png',
+                    'title':'Alert Box Library',
+                    'desc' : 'Simple , Responsive, Customizable , Frontend Javascript Library. Open Source npm Alert Box Package.',
+                    'image_url' : './projects_demo/woody-alert-me.png',
                     'type' : 'front-end',
-                    'source' : 'https://github.com/sayrgyiwoody/space/',
-                    'demo' : 'https://sayrgyiwoody.github.io/space/',
+                    'source' : 'https://github.com/sayrgyiwoody/alertMe-npm-package',
+                    'demo' : 'https://www.npmjs.com/package/woody-alert-me',
                 },
                 {
                     'id' : 3,
