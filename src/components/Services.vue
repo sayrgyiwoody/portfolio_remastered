@@ -10,15 +10,15 @@
             delay: 400,
           }"
           class="grid  md:grid-cols-3">
-                <div  v-for="(service,index) in services" :key="index"
-                
-                class="md:me-5 mb-4 md:mb-0 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 p-6 rounded-md shadow-sm hover:shadow-md bg-white dark:bg-zinc-800">
                 <div v-scroll-reveal.reset="{
                     origin: 'bottom',
                     distance: '20px',
                     delay: 600 ,
                     mobile : true,
-                  }">
+                  }" v-for="(service,index) in services" :key="index"
+                
+                class="md:me-5 mb-4 md:mb-0 hover:bg-slate-50 dark:hover:bg-zinc-700 duration-150 p-6 rounded-md shadow-sm hover:shadow-md bg-white dark:bg-zinc-800">
+                <div >
                   <i :class="service.icon" class=" text-zinc-900 dark:text-white fa-solid  text-5xl mb-2"></i>
                   <h4 class=" mb-2 text-zinc-900 dark:text-slate-100 text-3xl font-medium">{{service.title}}</h4>
                   <p class="font-medium mb-2 text-gray-500 dark:text-muted">{{service.desc}}</p>
