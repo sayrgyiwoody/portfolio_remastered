@@ -1,15 +1,15 @@
 <template>
- <nav :class="navFix && !(menuStatus) ? 'fixed top-0 animate__fadeInDown':''" class=" z-20 duration-200 animate__animated  w-full bg-white dark:bg-zinc-800 dark:text-white flex justify-between items-center px-4 md:px-10 py-3 shadow-md">
+ <nav id="home" :class="navFix && !(menuStatus) ? 'fixed top-0 animate__fadeInDown':''" class=" z-20 duration-200 animate__animated  w-full bg-white dark:bg-zinc-800 dark:text-white flex justify-between items-center px-4 md:px-10 py-3 shadow-md">
     <a href="#">Waiyan's <span class="bg-primary text-white p-2 rounded-sm ms-2">Portfolio</span></a>
-    <div  :class="menuStatus ? 'left-0':'-left-full'" id="menu" class="duration-200 fixed z-40 md:static md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent w-screen h-screen top-0 flex justify-center items-center bg-slate-200 dark:bg-zinc-950">
-        <ul class="flex flex-col md:flex-row space-y-6 md:space-y-0 text-center text-xl md:text-base  md:space-x-6 text-zinc-600 dark:text-slate-300">
-            <li><a href="#home" @click="setActive('home')" :class="{ 'nav-active': activeItem === 'home' }" >Home</a></li>
-            <li><a href="#about"  @click="setActive('about')" :class="{ 'nav-active': activeItem === 'about' }" >About</a></li>
-            <li><a href="#services"  @click="setActive('services')" :class="{ 'nav-active': activeItem === 'services' }" >Services</a></li>
-            <li><a href="#portfolio"  @click="setActive('portfolio')" :class="{ 'nav-active': activeItem === 'portfolio' }" >Portfolio</a></li>
-            <li><a href="#contact"  @click="setActive('contact')" :class="{ 'nav-active': activeItem === 'contact' }" >Contact</a></li>
+    <div  :class="menuStatus ? 'right-0':'-right-full'" id="menu" class="duration-200 fixed z-40 md:static md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent w-48 h-screen top-0 flex justify-center md:items-center bg-slate-200 dark:bg-zinc-900">
+        <ul class="flex flex-col md:flex-row space-y-6 md:space-y-0 text-center text-xl md:text-base  md:space-x-6 text-zinc-600 dark:text-slate-300 mt-32 md:mt-0">
+            <li><a href="#home" @click="setActive('home')"  :class="activeItem === 'home' ? 'nav-active' : ''" >Home</a></li>
+            <li><a href="#about"  @click="setActive('about')" :class="activeItem === 'about'? 'nav-active' : ''" >About</a></li>
+            <li><a href="#services"  @click="setActive('services')" :class="activeItem === 'services'? 'nav-active' : '' " >Services</a></li>
+            <li><a href="#portfolio"  @click="setActive('portfolio')" :class="activeItem === 'portfolio'? 'nav-active' : '' " >Portfolio</a></li>
+            <li><a href="#contact"  @click="setActive('contact')" :class="activeItem === 'contact'? 'nav-active' : '' " >Contact</a></li>
         </ul>
-        <div @click="toggleMenu" class="md:hidden btn-close-menu rounded-full border border-2 p-1 border-primary absolute top-7 right-7">
+        <div @click="toggleMenu" class="md:hidden btn-close-menu rounded-full border border-2 p-1 border-primary absolute top-7 left-9">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 256 256"><path fill="currentColor" d="M208.49 191.51a12 12 0 0 1-17 17L128 145l-63.51 63.49a12 12 0 0 1-17-17L111 128L47.51 64.49a12 12 0 0 1 17-17L128 111l63.51-63.52a12 12 0 0 1 17 17L145 128Z"/></svg>
         </div>
     </div>
@@ -103,15 +103,18 @@ export default {
     props: ['navFix'],
   data() {
     return {
-        activeItem: 'home',
         menuStatus : false,
         darkMode: localStorage.getItem('darkMode') === 'true',
     }
   },
+  computed: {
+    activeItem() {
+        return this.$store.state.currentSection;
+    }
+  },
   methods: {
     setActive(item) {
-        this.activeItem = item;
-        this.toggleMenu();
+        this.$store.dispatch('setCurrentSection', item);
     },
     toggleMenu(){
         this.menuStatus = !this.menuStatus;

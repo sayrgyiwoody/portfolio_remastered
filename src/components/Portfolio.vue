@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio" class="py-10 md:pb-32">
+    <div  class="py-10 md:pb-32">
         <div class=" mb-8">
             <h6 v-scroll-reveal.reset="{origin : 'top' , distance : '20px'}" class="text-gray-500 text-md md:text-xl font-medium ">Portfolio</h6>
             <h2 v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-xl md:text-4xl font-medium">Some of My <span class="text-primary">Recent Works</span></h2>
@@ -11,7 +11,7 @@
                 <p class=" cursor-pointer" :class="{'active':selectedType === 'front-end'}" @click="selectType('front-end')">Front-end</p>
                 <p class=" cursor-pointer" :class="{'active':selectedType === 'full-stack'}" @click="selectType('full-stack')">Full-stack</p>
             </div>
-            <div  class="grid md:grid-cols-3">
+            <div id="portfolio"  class="grid md:grid-cols-3">
                 <div v-scroll-reveal.reset="{
                     origin: 'bottom',
                     distance: '20px',
