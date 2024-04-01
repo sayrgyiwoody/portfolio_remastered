@@ -100,13 +100,10 @@ export default {
             if (sectionName !== "home") {
               this.navFix = true;
             }
-            this.$store.dispatch('setCurrentSection', sectionName);
           } else if (direction === "up") {
-            if (sectionName !== "home") {
+            if (sectionName === "about" && sectionName !== "home") {
               this.navFix = false;
             }
-            this.$store.dispatch('setCurrentSection', sectionName);
-
           }
         },
         offset: offset,
@@ -115,11 +112,10 @@ export default {
   },
   mounted() {
     this.checkDarkMode();
-    this.checkWayPoint("homeSection", "home");
     this.checkWayPoint("aboutSection", "about");
-    this.checkWayPoint("servicesSection", "services");
-    this.checkWayPoint("portfolioSection", "portfolio");
-    this.checkWayPoint("contactSection", "contact");
+    // this.checkWayPoint("servicesSection", "services");
+    // this.checkWayPoint("portfolioSection", "portfolio");
+    // this.checkWayPoint("contactSection", "contact");
   },
 };
 </script>
