@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class="px-5 py-10 md:py-20 items-center justify-center md:px-52 grid md:grid-cols-2">
+    <section id="about" class="px-5 py-10 md:py-20 items-center justify-center md:px-52 grid md:grid-cols-2">
         <div v-scroll-reveal.reset="{origin : 'left' , distance : '30px'}" class="img-container">
             <img  v-bind:src="`./images/woody.jpg`" class=" md:w-80 w-full h-80 md:h-full object-cover  rounded-md" alt="">
         </div>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style  scoped>

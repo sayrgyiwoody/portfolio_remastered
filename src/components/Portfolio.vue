@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio"  class="py-10 md:pb-32">
+    <section id="portfolio"  class="py-10 md:pb-32">
         <div class=" mb-8">
             <h6 v-scroll-reveal.reset="{origin : 'top' , distance : '20px'}" class="text-gray-500 text-md md:text-xl font-medium ">Portfolio</h6>
             <h2 v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-xl md:text-4xl font-medium">Some of My <span class="text-primary">Recent Works</span></h2>
@@ -40,7 +40,7 @@
             </div>
         
         
-    </div>
+    </section>
     
 </template>
 

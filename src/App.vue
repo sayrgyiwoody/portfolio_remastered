@@ -9,6 +9,9 @@ import Contact from "./components/Contact.vue";
 </script>
 
 <template>
+
+  
+
   <!-- top nav bar -->
   <top-nav :navFix="navFix"></top-nav>
 
@@ -16,6 +19,15 @@ import Contact from "./components/Contact.vue";
   <div class="bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-32 md:px-32">
     <!--Right social -->
     <right-line></right-line>
+
+    <div v-if="isLoading" class="z-50 bg-slate-100 dark:bg-zinc-800  loader-container" >
+      <div class="w-100 h-screen flex justify-center items-center ">
+        <div class="loader" >
+          <span class="loader-text text-zinc-800 dark:text-slate-100">loading</span>
+          <span class="load"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- home section -->
     <div ref="homeSection">
@@ -78,6 +90,7 @@ export default {
   components: { Services },
   data() {
     return {
+      isLoading : true,
       navFix: false,
     };
   },
@@ -109,13 +122,31 @@ export default {
         offset: offset,
       });
     },
+    scrollActive(){
+      const sections = document.querySelectorAll("section[id]");
+      
+      const scrollY = window.pageYOffset;
+        sections.forEach((section) => {
+          const current = document.getElementById(section.id);
+          const sectionHeight = current.offsetHeight; // get current height
+          const sectionTop = current.offsetTop - 200; // get current section of height
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            this.$store.dispatch('setCurrentSection', section.id);
+          }
+        });
+    
+    },
+    checkLoading(){
+      window.addEventListener('load', _ => {
+        this.isLoading = false;
+    })
+    }
   },
   mounted() {
+    window.addEventListener("scroll", this.scrollActive);
     this.checkDarkMode();
     this.checkWayPoint("aboutSection", "about");
-    // this.checkWayPoint("servicesSection", "services");
-    // this.checkWayPoint("portfolioSection", "portfolio");
-    // this.checkWayPoint("contactSection", "contact");
+    this.checkLoading();
   },
 };
 </script>

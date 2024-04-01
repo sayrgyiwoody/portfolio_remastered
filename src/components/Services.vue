@@ -1,5 +1,5 @@
 <template>
-    <div id="services" class="md:px-5 md:py-20">
+    <section id="services" class="md:px-5 md:py-20">
         <div class=" mb-12">
             <h6 v-scroll-reveal.reset="{origin : 'top' , distance : '20px'}" class="text-gray-500  text-lg md:text-xl font-medium ">My Services</h6>
             <h2 v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px'}" class="text-zinc-900 dark:text-slate-100 text-5xl font-medium">What <span class="text-primary">I do</span></h2>
@@ -28,7 +28,7 @@
             </div>
             
         </div>
-    </div>
+    </section>
     
 </template>
 

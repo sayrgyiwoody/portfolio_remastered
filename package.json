@@ -15,7 +15,8 @@
     "vue-scroll-reveal": "^2.1.0",
     "vue-waypoint": "^4.3.0",
     "vuex": "^4.0.2",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "woody-alert-me": "^3.0.8"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

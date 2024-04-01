@@ -1,5 +1,5 @@
 <template>
-    <div id="home" class="grid md:grid-cols-2 md:h-[90vh] px-5 md:px-32 justify-center items-center">
+    <section id="home" class="grid md:grid-cols-2 md:h-[90vh] px-5 md:px-32 justify-center items-center">
         <div class=" mb-10 md:mb-20">
             <div  class="relative flex flex-col items-center">
                 <img v-scroll-reveal.reset="{origin : 'bottom' , distance : '60px' , reset : false}" v-bind:src="`./images/me.png`" class=" w-96 relative bottom-[2px] left-0 z-10" alt="">
@@ -25,7 +25,7 @@
                 </div>
             </div> 
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

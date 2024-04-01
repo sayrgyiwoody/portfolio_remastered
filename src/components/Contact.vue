@@ -1,5 +1,5 @@
 <template>
-    <div id="contact" v-scroll-reveal.reset="{origin : 'top' , distance : '20px'}" class="bg-white dark:bg-zinc-800 rounded-md  py-5 md:py-10 md:px-36">
+    <section id="contact" v-scroll-reveal.reset="{origin : 'top' , distance : '20px'}" class="bg-white dark:bg-zinc-800 rounded-md  py-5 md:py-10 md:px-36">
         <div class="flex items-center justify-center flex-col mb-8">
             <h6 v-scroll-reveal.reset="{origin : 'top' , distance : '30px'}"  class="text-gray-500 text-md md:text-lg font-medium ">Contact Me</h6>
             <h2 v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px'}"  class="text-zinc-900 dark:text-slate-100 text-xl md:text-4xl font-medium">Get In <span class="text-primary">Touch</span></h2>
@@ -67,7 +67,7 @@
   
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
