@@ -23,7 +23,7 @@ import Contact from "./components/Contact.vue";
   <top-nav :navFix="navFix"></top-nav>
 
   <!-- main body start -->
-  <div class="bg-slate-100 dark:bg-zinc-900 px-5 py-12 md:py-0 md:pb-32 md:px-32">
+  <div class="bg-slate-100 dark:bg-zinc-900 px-5 pt-6 pb-8 md:py-0 md:pb-32 md:px-32">
     <!--Right social -->
     <right-line></right-line>
 
