@@ -10,7 +10,14 @@ import Contact from "./components/Contact.vue";
 
 <template>
 
-  
+    <div v-if="isLoading" class="w-screen h-screen flex justify-center items-center bg-slate-100 dark:bg-zinc-900 fixed z-50">
+      <div class="loader">
+        <div class="load-inner load-one"></div>
+        <div class="load-inner load-two"></div>
+        <div class="load-inner load-three"></div>
+        <span class=" font-semibold text-zinc-800 dark:text-slate-100">Loading...</span>
+      </div>
+    </div>
 
   <!-- top nav bar -->
   <top-nav :navFix="navFix"></top-nav>
@@ -20,14 +27,8 @@ import Contact from "./components/Contact.vue";
     <!--Right social -->
     <right-line></right-line>
 
-    <div v-if="isLoading" class="z-50 bg-slate-100 dark:bg-zinc-800  loader-container" >
-      <div class="w-100 h-screen flex justify-center items-center ">
-        <div class="loader" >
-          <span class="loader-text text-zinc-800 dark:text-slate-100">loading</span>
-          <span class="load"></span>
-        </div>
-      </div>
-    </div>
+    
+    
 
     <!-- home section -->
     <div ref="homeSection">
@@ -143,10 +144,10 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener("scroll", this.scrollActive);
     this.checkDarkMode();
-    this.checkWayPoint("aboutSection", "about");
     this.checkLoading();
+    window.addEventListener("scroll", this.scrollActive);
+    this.checkWayPoint("aboutSection", "about");
   },
 };
 </script>
