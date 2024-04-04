@@ -38,19 +38,19 @@
     
     <ul class="font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-l-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 shadow  rtl:space-x-reverse ">
         <li>
-        <a href="#home" :class="activeItem === 'home' ? 'bg-blue-700 text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white ">Home</a>
+        <a href="#home" :class="activeItem === 'home' ? 'bg-primary text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white ">Home</a>
       </li>
       <li>
-        <a href="#about" :class="activeItem === 'about' ? 'bg-blue-700 text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">About</a>
+        <a href="#about" :class="activeItem === 'about' ? 'bg-primary text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">About</a>
       </li>
       <li>
-        <a href="#services" :class="activeItem === 'services' ? 'bg-blue-700 text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Services</a>
+        <a href="#services" :class="activeItem === 'services' ? 'bg-primary text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Services</a>
       </li>  
       <li>
-        <a href="#portfolio" :class="activeItem === 'portfolio' ? 'bg-blue-700 text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Portfolio</a>
+        <a href="#portfolio" :class="activeItem === 'portfolio' ? 'bg-primary text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Portfolio</a>
       </li>
       <li>
-        <a href="#contact" :class="activeItem === 'contact' ? 'bg-blue-700 text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Contact</a>
+        <a href="#contact" :class="activeItem === 'contact' ? 'bg-primary text-white' : ''" class="block py-2 px-3 text-gray-900 rounded dark:text-white  ">Contact</a>
       </li>
     </ul>
   </div>
