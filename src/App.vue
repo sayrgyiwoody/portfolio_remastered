@@ -10,14 +10,14 @@ import Contact from "./components/Contact.vue";
 
 <template>
 
-    <div v-if="isLoading" class="w-screen h-screen flex justify-center items-center bg-slate-100 dark:bg-zinc-900 fixed z-50">
+    <!-- <div v-if="isLoading" class="w-screen h-screen flex justify-center items-center bg-slate-100 dark:bg-zinc-900 fixed z-50">
       <div class="loader">
         <div class="load-inner load-one"></div>
         <div class="load-inner load-two"></div>
         <div class="load-inner load-three"></div>
         <span class=" font-semibold text-zinc-800 dark:text-slate-100">Loading...</span>
       </div>
-    </div>
+    </div> -->
 
   <!-- top nav bar -->
   <top-nav :navFix="navFix"></top-nav>

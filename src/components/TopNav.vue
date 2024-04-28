@@ -102,7 +102,7 @@
     <div @click="toggleMenu" class="md:hidden">
       <div
         :class="menuStatus ? 'show' : ''"
-        class="menu-icon bg-gray-100 dark:bg-zinc-600 border border-gray-200 dark:border-0 rounded-md"
+        class="menu-icon overflow-hidden bg-gray-100 dark:bg-zinc-600 border border-gray-200 dark:border-0 rounded-md"
       >
         <span class="bg-zinc-800 dark:bg-white"></span>
         <span class="bg-zinc-800 dark:bg-white"></span>

@@ -21,7 +21,7 @@
             <div v-scroll-reveal.reset="{origin : 'bottom' , distance : '30px',delay: 700}" class=" mt-4 md:mt-8">
                 <p class="mb-3 text-zinc-900 dark:text-slate-100 text-[20px] font-medium">Tech Stack</p>
                 <div class="">
-                    <img src="https://skillicons.dev/icons?i=figma,bootstrap,tailwindcss,jquery,vuejs,laravel,mysql&perline=10" />      
+                    <img src="https://skillicons.dev/icons?i=figma,bootstrap,tailwindcss,react,vuejs,laravel,mysql&perline=10" />      
                 </div>
             </div> 
         </div>
