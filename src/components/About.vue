@@ -31,8 +31,8 @@
                     </div>
                 </div>
                 <div v-if="currentTab === 'exp'" class="exp animate__animated animate__bounceIn">
-                    <p class="text-xl mt-3 font-medium text-primary">2023 - current</p>
-                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Graphic Designer at Creative Coder MM</p>
+                    <p class="text-xl mt-3 font-medium text-primary">2024 - current</p>
+                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Web Developer at Creative Coder MM</p>
                     <p class="text-xl mt-3 font-medium text-primary">Hackathons</p>
                     <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">2023 Job-Matching Hackathon 2nd Runner Up</p>
                     <p class="text-xl mt-3 font-medium text-primary">OJTs</p>
