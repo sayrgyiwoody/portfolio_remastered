@@ -31,10 +31,13 @@
                     </div>
                 </div>
                 <div v-if="currentTab === 'exp'" class="exp animate__animated animate__bounceIn">
-                    <p class="text-xl mt-3 font-medium text-primary">2024 - current</p>
+                    <p class="text-xl mt-3 font-medium text-primary">2024 - 2025</p>
                     <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Web Developer at Creative Coder MM</p>
                     <p class="text-xl mt-3 font-medium text-primary">Hackathons</p>
-                    <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">2023 Job-Matching Hackathon 2nd Runner Up</p>
+                    <ul class="list-disc list-inside pl-5 text-gray-700 dark:text-muted">
+                        <li class="text-sm font-medium">2025 Technortal 1 Project 1 Week 1st Prize</li>
+                        <li class="text-sm font-medium">2024 UCSY Product Show 1st Prize</li>
+                        <li class="text-sm font-medium">2023 Job-Matching Hackathon 2nd Runner Up</li></ul>
                     <p class="text-xl mt-3 font-medium text-primary">OJTs</p>
                     <p class=" text-sm font-medium text-gray-700 dark:text-slate-300">Code Lab A to Z batch 6 OJT First Prize Winner</p>
                 </div>
