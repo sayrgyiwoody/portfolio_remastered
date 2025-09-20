@@ -1,11 +1,18 @@
 <template>
   <section
     id="about"
-    class=" md:py-20 md:space-x-8 items-start justify-center md:px-52 grid md:grid-cols-2"
+    v-scroll-reveal.reset="{
+      origin: 'left',
+      delay: 500,
+      duration: 1500,
+      distance: '40px',
+      reset: false,
+      opacity: 0,
+    }"
+    class="mt-8 md:mt-0 md:py-20 md:space-x-8 items-start justify-center md:px-52 grid md:grid-cols-2"
   >
     <!-- Left Image Slideshow -->
     <div
-      v-scroll-reveal.reset="{ origin: 'left', distance: '30px' }"
       class="img-container relative h-80 md:h-[28rem] overflow-hidden rounded-md"
       @mouseenter="pauseSlideshow"
       @mouseleave="resumeSlideshow"
@@ -27,7 +34,7 @@
         ‹
       </button>
       <button
-      v-if="currentImages.length > 1"
+        v-if="currentImages.length > 1"
         class="absolute top-1/2 -translate-y-1/2 right-3 bg-black/50 text-white rounded-full p-2 hover:bg-black/70"
         @click="nextImage"
       >
@@ -35,12 +42,17 @@
       </button>
 
       <!-- Dots -->
-      <div v-if="currentImages.length > 1" class="absolute bottom-3 w-full flex justify-center space-x-2">
+      <div
+        v-if="currentImages.length > 1"
+        class="absolute bottom-3 w-full flex justify-center space-x-2"
+      >
         <span
           v-for="(img, index) in currentImages"
           :key="index"
           class="w-3 h-3 rounded-full cursor-pointer"
-          :class="index === currentImageIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'"
+          :class="
+            index === currentImageIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
+          "
           @click="goToImage(index)"
         ></span>
       </div>
@@ -48,23 +60,16 @@
 
     <!-- Right About Info -->
     <div class="about-text mt-6 md:mt-0">
-      <h4
-        v-scroll-reveal.reset="{ origin: 'top', distance: '30px' }"
-        class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3"
-      >
+      <h4 class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3">
         About <span class="text-primary">Me</span>
       </h4>
-      <p
-        v-scroll-reveal.reset="{ origin: 'bottom', distance: '40px' }"
-        class="text-gray-500 dark:text-muted text-sm font-medium mb-4"
-      >
-        Hello I'm Waiyan Tun. I'm a 21 years old Software Engineer specialized
-        in AI and Web Development.
+      <p class="text-gray-500 dark:text-muted text-sm font-medium mb-4">
+        Hello I'm Waiyan Tun. I'm a 21 years old Software Engineer specialized in AI and
+        Web Development.
       </p>
 
       <!-- Tabs -->
       <div
-        v-scroll-reveal.reset="{ origin: 'bottom', distance: '30px', delay: 700 }"
         class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold"
       >
         <p
@@ -91,10 +96,7 @@
       </div>
 
       <!-- Tab Content -->
-      <div
-        v-scroll-reveal.reset="{ origin: 'bottom', distance: '40px', delay: 700 }"
-        class="tab-info py-5"
-      >
+      <div class="tab-info py-5">
         <!-- Skills -->
         <div
           v-if="currentTab === 'skill'"
@@ -197,8 +199,12 @@ const initialImages = [
 const hackathons = [
   {
     title: "2025 APTYPS Myanmar Cybersecurity and Privacy Chatbot Competition Champion",
-    images: ["./images/hack1.jpg", "./images/hack2.jpg","./images/hack3.jpg", "./images/hack4.jpg"],
-
+    images: [
+      "./images/hack1.jpg",
+      "./images/hack2.jpg",
+      "./images/hack3.jpg",
+      "./images/hack4.jpg",
+    ],
   },
   {
     title: "2025 UCSY Product Show 1st Prize",
@@ -219,7 +225,11 @@ const hackathons = [
 ];
 
 const ojtImages = ["./images/ojt1.jpg"];
-const fieldworkImages = ["./images/field1.jpg", "./images/field2.jpg", "./images/field3.jpg"];
+const fieldworkImages = [
+  "./images/field1.jpg",
+  "./images/field2.jpg",
+  "./images/field3.jpg",
+];
 
 const currentImages = ref(initialImages);
 const currentImageIndex = ref(0);
@@ -250,8 +260,7 @@ function changeSlideshow(images) {
   currentImageIndex.value = 0;
 }
 function nextImage() {
-  currentImageIndex.value =
-    (currentImageIndex.value + 1) % currentImages.value.length;
+  currentImageIndex.value = (currentImageIndex.value + 1) % currentImages.value.length;
 }
 function prevImage() {
   currentImageIndex.value =
