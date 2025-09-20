@@ -36,6 +36,7 @@ const vScrollReveal = createScrollRevealDirective({
     duration: 1500,
     distance : '80px',
     reset : false ,
-    opacity : 0,
+    opacity: 0,
 });
+
 </script>

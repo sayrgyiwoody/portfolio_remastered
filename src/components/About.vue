@@ -1,29 +1,34 @@
 <template>
   <section
     id="about"
-    v-scroll-reveal.reset="{
-      origin: 'left',
-      delay: 500,
-      duration: 1500,
-      distance: '40px',
-      reset: false,
-      opacity: 0,
-    }"
-    class="mt-8 md:mt-0 md:py-20 md:space-x-8 items-start justify-center md:px-52 grid md:grid-cols-2"
+    class="py-8 md:py-20 md:space-x-8 items-start justify-center md:px-52 grid md:grid-cols-2"
   >
     <!-- Left Image Slideshow -->
     <div
+      v-scroll-reveal="{ delay: 500, duration: 1500, distance: '0px', reset: false }"
       class="img-container relative h-80 md:h-[28rem] overflow-hidden rounded-md"
       @mouseenter="pauseSlideshow"
       @mouseleave="resumeSlideshow"
+      @touchstart="handleTouchStart"
+      @touchend="handleTouchEnd"
     >
-      <!-- Current Slide -->
-      <img
-        :src="currentImages[currentImageIndex]"
-        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-        :key="currentImages[currentImageIndex]"
-        alt="slideshow"
-      />
+      <!-- Track -->
+      <div
+        class="absolute inset-0 flex h-full w-full transition-transform duration-500 ease-in-out"
+        :style="{ transform: `translateX(-${currentImageIndex * 100}%)` }"
+      >
+        <div
+          v-for="(img, index) in currentImages"
+          :key="index"
+          class="w-full h-full flex-shrink-0"
+        >
+          <img
+            :src="img"
+            alt="slideshow"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
       <!-- Navigation Arrows -->
       <button
@@ -50,16 +55,17 @@
           v-for="(img, index) in currentImages"
           :key="index"
           class="w-3 h-3 rounded-full cursor-pointer"
-          :class="
-            index === currentImageIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
-          "
+          :class="index === currentImageIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'"
           @click="goToImage(index)"
         ></span>
       </div>
     </div>
 
     <!-- Right About Info -->
-    <div class="about-text mt-6 md:mt-0">
+    <div
+      v-scroll-reveal="{ delay: 600, duration: 1500, distance: '0px', reset: false }"
+      class="about-text mt-6 md:mt-0"
+    >
       <h4 class="text-zinc-900 dark:text-slate-100 text-5xl font-medium mb-3">
         About <span class="text-primary">Me</span>
       </h4>
@@ -69,28 +75,14 @@
       </p>
 
       <!-- Tabs -->
-      <div
-        class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold"
-      >
-        <p
-          class="cursor-pointer"
-          @click="setTab('skill')"
-          :class="{ active: currentTab === 'skill' }"
-        >
+      <div class="tabs flex space-x-6 text-zinc-900 dark:text-slate-100 text-xl font-semibold">
+        <p class="cursor-pointer" @click="setTab('skill')" :class="{ active: currentTab === 'skill' }">
           Skill
         </p>
-        <p
-          class="cursor-pointer"
-          @click="setTab('exp')"
-          :class="{ active: currentTab === 'exp' }"
-        >
+        <p class="cursor-pointer" @click="setTab('exp')" :class="{ active: currentTab === 'exp' }">
           Experience
         </p>
-        <p
-          class="cursor-pointer"
-          @click="setTab('edu')"
-          :class="{ active: currentTab === 'edu' }"
-        >
+        <p class="cursor-pointer" @click="setTab('edu')" :class="{ active: currentTab === 'edu' }">
           Education
         </p>
       </div>
@@ -98,10 +90,7 @@
       <!-- Tab Content -->
       <div class="tab-info py-5">
         <!-- Skills -->
-        <div
-          v-if="currentTab === 'skill'"
-          class="skil text-zinc-900 dark:text-slate-300 font-semibold"
-        >
+        <div v-if="currentTab === 'skill'" class="skil text-zinc-900 dark:text-slate-300 font-semibold">
           <p class="mt-3">Graphic Design</p>
           <div class="w-full mt-2 mb-5 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
             <div class="bg-primary h-2.5 rounded-full" style="width: 25%"></div>
@@ -182,79 +171,38 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const vScrollReveal = createScrollRevealDirective({
   class: "v-scroll-reveal",
-  delay: 500,
-  duration: 1500,
-  distance: "80px",
   reset: false,
   opacity: 0,
+  delay: 500,
 });
 
 // === Slideshow State ===
-const initialImages = [
-  "./images/woody1.jpg",
-  "./images/woody2.jpg",
-  "./images/woody3.jpg",
-];
+const initialImages = ["./images/woody1.jpg","./images/woody2.jpg","./images/woody3.jpg"];
 
 const hackathons = [
-  {
-    title: "2025 APTYPS Myanmar Cybersecurity and Privacy Chatbot Competition Champion",
-    images: [
-      "./images/hack1.jpg",
-      "./images/hack2.jpg",
-      "./images/hack3.jpg",
-      "./images/hack4.jpg",
-    ],
-  },
-  {
-    title: "2025 UCSY Product Show 1st Prize",
-    images: ["./images/hack5.jpg", "./images/hack6.jpg"],
-  },
-  {
-    title: "2025 Technortal 1 Project 1 Week 1st Prize",
-    images: ["./images/hack7.jpg"],
-  },
-  {
-    title: "2024 UCSY Product Show 1st Prize",
-    images: ["./images/hack8.jpg", "./images/hack9.jpg"],
-  },
-  {
-    title: "2023 Job-Matching Hackathon 2nd Runner Up",
-    images: ["./images/hack10.jpg", "./images/hack11.jpg"],
-  },
+  { title: "2025 APTYPS Myanmar Cybersecurity and Privacy Chatbot Competition Champion", images: ["./images/hack1.jpg","./images/hack2.jpg","./images/hack3.jpg","./images/hack4.jpg"] },
+  { title: "2025 UCSY Product Show 1st Prize", images: ["./images/hack5.jpg","./images/hack6.jpg"] },
+  { title: "2025 Technortal 1 Project 1 Week 1st Prize", images: ["./images/hack7.jpg"] },
+  { title: "2024 UCSY Product Show 1st Prize", images: ["./images/hack8.jpg","./images/hack9.jpg"] },
+  { title: "2023 Job-Matching Hackathon 2nd Runner Up", images: ["./images/hack10.jpg","./images/hack11.jpg"] },
 ];
 
 const ojtImages = ["./images/ojt1.jpg"];
-const fieldworkImages = [
-  "./images/field1.jpg",
-  "./images/field2.jpg",
-  "./images/field3.jpg",
-];
+const fieldworkImages = ["./images/field1.jpg","./images/field2.jpg","./images/field3.jpg"];
 
 const currentImages = ref(initialImages);
 const currentImageIndex = ref(0);
 let slideshowInterval = null;
 
 // Auto slide
-onMounted(() => {
-  startSlideshow();
-});
-onUnmounted(() => {
-  clearInterval(slideshowInterval);
-});
+onMounted(() => startSlideshow());
+onUnmounted(() => clearInterval(slideshowInterval));
 
-// Methods
 function startSlideshow() {
-  slideshowInterval = setInterval(() => {
-    nextImage();
-  }, 5000);
+  slideshowInterval = setInterval(nextImage, 5000);
 }
-function pauseSlideshow() {
-  clearInterval(slideshowInterval);
-}
-function resumeSlideshow() {
-  startSlideshow();
-}
+function pauseSlideshow() { clearInterval(slideshowInterval); }
+function resumeSlideshow() { startSlideshow(); }
 function changeSlideshow(images) {
   currentImages.value = images;
   currentImageIndex.value = 0;
@@ -263,26 +211,32 @@ function nextImage() {
   currentImageIndex.value = (currentImageIndex.value + 1) % currentImages.value.length;
 }
 function prevImage() {
-  currentImageIndex.value =
-    (currentImageIndex.value - 1 + currentImages.value.length) %
-    currentImages.value.length;
+  currentImageIndex.value = (currentImageIndex.value - 1 + currentImages.value.length) % currentImages.value.length;
 }
-function goToImage(index) {
-  currentImageIndex.value = index;
+function goToImage(index) { currentImageIndex.value = index; }
+
+// Swipe
+let touchStartX = 0;
+function handleTouchStart(e) {
+  touchStartX = e.changedTouches[0].clientX;
+}
+function handleTouchEnd(e) {
+  const touchEndX = e.changedTouches[0].clientX;
+  const diffX = touchStartX - touchEndX;
+  if (Math.abs(diffX) > 50) {
+    if (diffX > 0) nextImage(); // swipe left
+    else prevImage();           // swipe right
+  }
 }
 </script>
 
 <script>
 export default {
   data() {
-    return {
-      currentTab: "skill",
-    };
+    return { currentTab: "skill" };
   },
   methods: {
-    setTab(tabName) {
-      this.currentTab = tabName;
-    },
+    setTab(tabName) { this.currentTab = tabName; },
   },
 };
 </script>
@@ -303,10 +257,6 @@ export default {
   bottom: -6px;
   transition: 0.5s;
 }
-.tabs p:hover::after {
-  width: 100%;
-}
-.tabs p.active::after {
-  width: 100%;
-}
+.tabs p:hover::after { width: 100%; }
+.tabs p.active::after { width: 100%; }
 </style>
